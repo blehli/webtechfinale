@@ -1,0 +1,38 @@
+body{
+	background: url(../pictures/background.png);
+}
+
+#maincontainer {
+    width: 50%;
+    height: 100%;
+    background-color: rgba(236, 240, 241, 0.7);
+    padding: 20px;
+    border-radius: 20px;
+    margin: auto;
+}
+
+header{
+    border-bottom: 4px gray solid;
+}
+
+h1{
+    letter-spacing: 2px;
+}
+
+a.quizstart{
+	border-radius: 5px;
+    background-color: gray;
+    border: none;
+    color: white;
+    padding: 3px 7px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+footer{
+    color:gray;
+	border-top: 4px gray solid;
+}

@@ -5,33 +5,37 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="stylesheet" type="text/css" href="css/login_reg.css">
-        <link rel="icon" href="/pictures/LOGO.png">
-        <meta charset="UTF-8">
-        <title>Login | Web Systems and Technology</title> 
-    </head>
-    
-    <body>
-        <div id="maincontainer">
+<head>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
+    <link rel="icon" href="../website/pictures/LOGO.png">
+    <meta charset="UTF-8">
+    <title>LOGIN | Web Systems and Technology</title>
+    <link rel="stylesheet" href="css/login_reg.css">
+</head>
 
-            <h1>Welcome to WsTutor!</h1>
-            <h3>A website for web scripting basic tutorial.</h3>
-            
-            <div id="loginform">
-                <form action="../php/logincheck.php" method="POST">
-                    <p>Username : <input type="text" name="uname"></p>
-                    <p>Password : <input type="password" name="pass"></p>
-                    <br>
-                    <p id="loginbutton"><button type="submit" name="login">Login</button></p>
-                </form>
-                
-                <p>New? Not registered yet? <a href="../webpages/register.html">Sign-up here</a></p>
-                <p><a href="webpages/forgotpassword.php">Forgot Password?</a></p>
-            </div>
-        </div>
-    
-    </body>
-    
+<body>
+
+<div class="firsthalf">
+    <h1>WELCOME TO WSTUTOR</h1>
+    <h3>A WEBSITE FOR WEB SCRIPTING BASIC TUTORIAL.</h3>
+</div>
+<div class="login">
+    <h1>WSTUTOR</h1>
+    <h3>&reg;</h3>
+    <form action="../php/logincheck.php" method="POST">
+
+        <input type="text" name="uname" placeholder="ENTER YOUR USERNAME">
+        <input type="password" name="pass" placeholder="ENTER YOUR PASSWORD">
+        <br>
+        <button type="submit" name="login">Login</button>
+        <h4><a href="webpages/forgotpassword.php" style="text-decoration: none; color: white">Forgot Password?</a></h4>
+    </form>
+
+    <h5>New? Not registered yet? <a href="../webpages/register.html" style="text-decoration: none; color: #8A2BE2">Sign-up here</a></h5>
+</div>
+
+
+
+</body>
+
 </html>
-    

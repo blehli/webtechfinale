@@ -2,12 +2,12 @@
 
 //connection credentials
 $dbServername ="localhost";
-$dbUserername ="root";
+$dbUsername ="root";
 $dbPassword ="";
 $dbName ="loginsystem";
 
 //mysqli object
-$conn = mysqli_connect($dbServername,$dbUserername,$dbPassword,$dbName);
+$conn = mysqli_connect($dbServername,$dbUsername,$dbPassword,$dbName);
 
 //error handler
 if($conn->connect_error){

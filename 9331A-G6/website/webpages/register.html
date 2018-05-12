@@ -1,39 +1,92 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    <head>
-        <link rel="stylesheet" type="text/css" href="../css/login_reg.css">
-        <link rel="icon" href="../pictures/LOGO.png">
-        <meta charset="UTF-8">
-        <title>Sign-up | Web Systems and Technology</title> 
-    </head>
-    
-    <body>
-        <div id="maincontainer">
-            <h1>WsTutor!</h1>
-            <h3>Sign-up and learn Server-side Web Scripting Technologies and Web Application Security. </h3>
-            
-            <div class="regform">
-                <form action="../php/register.php" method="GET">
-                    <p>First Name : <input type="text" name="fname"></p>
-                    <p>Last Name : <input type="text" name="lname"></p>
-                    <p>Email : <input type="email" name="emailadd"></p>
-                    <p>Username : <input type="username" name="uname"></p>
-                    <p>Password : <input type="password" name="pass"></p>
-                    <p>Re-type Password : <input type="password" name="repass"></p>
-                    
-                    <p>Birthday : <input type="date" name="birthday"> </p>
-                    <p>Gender : <input type="radio" name="gender" value="male"> Male 
-                                <input type="radio" name="gender" value="female"> Female</p>
-                    <p id="signupbutton"><button type="submit" name="submit">Sign Up!</button></p>
-                </form>
+<head>
+  <title>REGISTER ACCOUNT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+
+<body class="bg-dark">
+  <div class="container">
+    <div class="card card-register mx-auto mt-4">
+	  <!--card header-->
+	  
+      <div class="card-header" style="background-color:#E0F2F1"><h5>WS Tutor</br><small>Sign-up and learn Server-side Web Scripting Technologies and Web Application Security.</small></h5></div>
+       <!--inputs-->
+	  <div class="card-body">
+        <form action="../php/register.php" method="post" target="_self">
+          <div class="form-group">
+            <div class="form-row">
+              <div class="col-md-6">
+                <label for="exampleInputName">First name</label>
+                <input name="fname" class="form-control" id="exampleInputName" type="text" aria-describedby="nameHelp" placeholder="Enter first name">
+              </div>
+              <div class="col-md-6">
+                <label for="exampleInputLastName">Last name</label>
+                <input name="lname" class="form-control" id="exampleInputLastName" type="text" aria-describedby="nameHelp" placeholder="Enter last name">
+              </div>
             </div>
-            
-        
-        
+          </div>
+		  
+		   <div class="form-group">
+            <div class="form-row">
+			  <div class="col-md-6">
+				<label for="exampleInputEmail1">User name</label>
+				<input name="username" class="form-control" id="exampleInputUserName" type="username" aria-describedby="nameHelp" placeholder="Enter username">
+			  </div>
+			  <div class="col-md-6">
+				<label for="exampleInputEmail1">Email address</label>
+				<input name="email" class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="Enter email">
+			  </div>
+            </div>
+          </div>
+		  
+          <div class="form-group">
+            <div class="form-row">
+              <div class="col-md-6">
+                <label for="exampleInputPassword1">Password</label>
+                <input name="password" class="form-control" id="exampleInputPassword1" type="password" placeholder="Password">
+              </div>
+              <div class="col-md-6">
+                <label for="exampleConfirmPassword">Confirm password</label>
+                <input name="confirmpass" class="form-control" id="exampleConfirmPassword" type="password" placeholder="Confirm password">
+              </div>
+            </div>
+          </div>
+		  
+		  <div class="form-group">
+			<label for="gender">Gender</label></br>
+				<label class="radio-inline">
+				  <input type="radio" name="gender">male
+				</label></br>
+				<label class="radio-inline">
+				  <input type="radio" name="gender">female
+				</label>
+			</div>
+			
+		  <div class="form-group">
+            <label for="exampleInputEmail1">Birthday</label>
+            <input class="form-control" id="exampleInputNumber" type="date" name="bday">
+          </div>
+		  
+		  <!--register button-->
+          <input type="submit" name="register" value="Register" class="btn btn-secondary btn-block" >
+        </form>
+		<!--return to login page-->
+        <div class="text-center">
+          <a class="d-block small mt-4" href="../index.html">Login Page</a>
         </div>
-    
-    </body>
-
-
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+</body>
 </html>

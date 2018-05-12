@@ -1,0 +1,98 @@
+body {
+    background-image: url(../pictures/background.jpg);
+}
+
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+@font-face {
+            font-family: Qontra;
+            src: url(../Homepage/fonts/Qontra.otf);
+        }
+        .row.content {height: 450px}
+
+        /* Set gray background color and 100% height */
+        .sidenav {
+            padding-top: 20px;
+            background-color: #f1f1f1;
+            height: 100%;
+        }
+
+        /* Set black background color, white text and some padding */
+        footer.container-fluid{
+            top: 500px;
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+        .col-sm-8{
+            background-color: black;
+
+        }
+
+        .col-sm-8 img{
+            position: relative;
+            width:50%;
+            left:300px;
+
+        }
+        .col-sm-8 h1{
+            position: relative;
+            width:50%;
+            left:250px;
+            color:red;
+            font-family: Qontra;
+
+        }
+
+        .col-sm-8 p{
+            font-family: Qontra;
+            font-size: 20px;
+        }
+
+        .rowpictures{
+            width:100%;
+            border:500px;
+        }
+        .rowpictures>.firstimage{
+            position: relative;
+            width:100%;
+            top:-150px;
+            left:-300px;
+        }
+
+        .rowpictures>.secondimage{
+            position: relative;
+            width:70%;
+            top:-600px;
+            left:350px;
+        }
+        .rowpictures>.thirdimage{
+            position: relative;
+            width:100%;
+            top:-700px;
+            left:-300px;
+        }
+        .rowpictures>.fourthimage{
+            position: relative;
+            width:100%;
+            top:-920px;
+            left:300px;
+        }
+
+        .othercont{
+            position: relative;
+            top: -1000px;
+        }
+
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+            .row.content {height:auto;}
+        }

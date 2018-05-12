@@ -4,111 +4,17 @@
     <title>WSTUTOR | Node.Js</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="icon" href="../pictures/LOGO.png">
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/topic.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style>
-        /* Remove the navbar's default margin-bottom and rounded borders */
-        .navbar {
-            margin-bottom: 0;
-            border-radius: 0;
-        }
-
-        @font-face {
-            font-family: Qontra;
-            src: url(../Homepage/fonts/Qontra.otf);
-        }
-
-        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-        .row.content {height: 450px}
-
-        /* Set gray background color and 100% height */
-        .sidenav {
-            padding-top: 20px;
-            background-color: #f1f1f1;
-            height: 100%;
-        }
-
-        /* Set black background color, white text and some padding */
-        footer.container-fluid{
-            top: 500px;
-            background-color: #555;
-            color: white;
-            padding: 15px;
-        }
-        .col-sm-8{
-            background-color: black;
-
-        }
-
-        .col-sm-8 img{
-            position: relative;
-            width:50%;
-            left:300px;
-
-        }
-        .col-sm-8 h1{
-            position: relative;
-            width:50%;
-            left:250px;
-            color:red;
-            font-family: Qontra;
-
-        }
-
-        .col-sm-8 p{
-            font-family: Qontra;
-            font-size: 20px;
-        }
-
-        .rowpictures{
-            width:100%;
-            border:500px;
-        }
-        .rowpictures>.firstimage{
-            position: relative;
-            width:100%;
-            top:-150px;
-            left:-300px;
-        }
-
-        .rowpictures>.secondimage{
-            position: relative;
-            width:70%;
-            top:-600px;
-            left:350px;
-        }
-        .rowpictures>.thirdimage{
-            position: relative;
-            width:100%;
-            top:-700px;
-            left:-300px;
-        }
-        .rowpictures>.fourthimage{
-            position: relative;
-            width:100%;
-            top:-920px;
-            left:300px;
-        }
-
-        .othercont{
-            position: relative;
-            top: -1000px;
-        }
-
-        /* On small screens, set height to 'auto' for sidenav and grid */
-        @media screen and (max-width: 767px) {
-            .sidenav {
-                height: auto;
-                padding: 15px;
-            }
-            .row.content {height:auto;}
-        }
-    </style>
 </head>
 <body>
-
-<nav class="navbar navbar-inverse">
+    
+ <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -132,15 +38,10 @@
     </div>
 </nav>
 
-<div class="container-fluid text-center">
+<div class="container-fluid">
     <div class="row content">
-        <div class="col-sm-2 sidenav">
-            <p><a href="..">Link</a></p>
-            <p><a href="#">Link</a></p>
-            <p><a href="#">Link</a></p>
-        </div>
         <div class="col-sm-8 text-left">
-            <img src="../Homepage/pictures/node.png">
+            <img src="../pictures/node.png">
             <div><p style="color:  #90ee90">Node.js is a an open source, client side, but more of server-side platform that was created on Google Chrome’s Javascript
                 or what they call ‘V8 Engine’.<br/> Node.js is primarily used for networking applications and server-side operations. </p></div>
             <hr>
@@ -152,10 +53,10 @@
             <hr width="1000px">
             <h3 style="color: white">NOTABLE COMPANIES THAT USE NODE.JS</h3>
                 <div class = "rowpictures">
-                    <div class="firstimage"> <img src="../Homepage/pictures/paypal.png"></div>
-                    <div class="secondimage"> <img src="../Homepage/pictures/nasa.png"></div>
-                    <div class="thirdimage"> <img src="../Homepage/pictures/micro.png"></div>
-                    <div class="fourthimage"> <img src="../Homepage/pictures/netflix.png"></div>
+                    <div class="firstimage"> <img src="../pictures/paypal.png"></div>
+                    <div class="secondimage"> <img src="../pictures/nasa.png"></div>
+                    <div class="thirdimage"> <img src="../pictures/micro.png"></div>
+                    <div class="fourthimage"> <img src="../pictures/netflix.png"></div>
                 </div>
             <div class="othercont">
                 <hr width="1000px">
@@ -196,7 +97,6 @@
                         exports.myDateTime = function date(){<br/>
                         return Date();<br/>
                         }</p>
-                    </p>
                 </blockquote>
                 <blockquote><h3 style="color: white">How to use Node.js as a java server</h3>
                     <p style="color: #90ee90">We are going to learn how node.js is used as a web server by providing you a simple example of sending a request from a client to the server, then the server responding to the client.
@@ -206,9 +106,9 @@
                         What happens in this part is that once the client sends a request and it is received, the server will respond with a header.
                         Once you’re done with the headers you can now send a string to the response. You can do it by typing ‘response.end();’.
                         It will appear if the request is accepted and is successful.
-                        After that you can make the server listen to the clients on a specific port by typing the command ‘server.listen(*enter port no. here)’.  Example below is provided.</p
+                        After that you can make the server listen to the clients on a specific port by typing the command ‘server.listen(*enter port no. here)’.  Example below is provided.
                     </p>
-                    <img src="../Homepage/pictures/ex.png"></blockquote>
+                    <img src="../pictures/ex.png"></blockquote>
             </div>
 
         </div>
@@ -222,6 +122,9 @@
         </div>
     </div>
 </div>
+    
+    
+
 
 <footer class="container-fluid text-center">
     <p>Footer Text</p>

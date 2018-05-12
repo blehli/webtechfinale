@@ -1,86 +1,159 @@
--- phpMyAdmin SQL Dump
--- version 4.7.4
--- https://www.phpmyadmin.net/
+-- MySQL dump 10.13  Distrib 5.6.23, for Win64 (x86_64)
 --
--- Host: 127.0.0.1:3306
--- Generation Time: May 04, 2018 at 06:23 PM
--- Server version: 5.7.19
--- PHP Version: 5.6.31
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
-SET time_zone = "+00:00";
-
+-- Host: localhost    Database: loginsystem
+-- ------------------------------------------------------
+-- Server version	5.7.19
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `loginsystem`
---
-
--- --------------------------------------------------------
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
 -- Table structure for table `choice`
 --
 
 DROP TABLE IF EXISTS `choice`;
-CREATE TABLE IF NOT EXISTS `choice` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `choice` (
+  `quiz_num` int(11) NOT NULL,
   `question_num` int(11) NOT NULL,
   `correct` tinyint(1) NOT NULL DEFAULT '0',
-  `text` text NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `choice1` varchar(45) NOT NULL,
+  `choice2` varchar(45) NOT NULL,
+  `choice3` varchar(45) NOT NULL,
+  PRIMARY KEY (`quiz_num`,`question_num`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- --------------------------------------------------------
+--
+-- Dumping data for table `choice`
+--
+
+LOCK TABLES `choice` WRITE;
+/*!40000 ALTER TABLE `choice` DISABLE KEYS */;
+/*!40000 ALTER TABLE `choice` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `question`
 --
 
 DROP TABLE IF EXISTS `question`;
-CREATE TABLE IF NOT EXISTS `question` (
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `question` (
   `question_num` int(11) NOT NULL,
-  `text` text NOT NULL,
-  PRIMARY KEY (`question_num`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `question` longtext NOT NULL,
+  `quiznum` int(11) NOT NULL,
+  `answer` varchar(45) NOT NULL,
+  PRIMARY KEY (`question_num`),
+  KEY `quiznum_idx` (`quiznum`),
+  CONSTRAINT `quiznum` FOREIGN KEY (`quiznum`) REFERENCES `quiztype` (`quiznum`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- --------------------------------------------------------
+--
+-- Dumping data for table `question`
+--
+
+LOCK TABLES `question` WRITE;
+/*!40000 ALTER TABLE `question` DISABLE KEYS */;
+/*!40000 ALTER TABLE `question` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `quiztype`
+--
+
+DROP TABLE IF EXISTS `quiztype`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `quiztype` (
+  `quiznum` int(11) NOT NULL AUTO_INCREMENT,
+  `type` varchar(45) NOT NULL,
+  PRIMARY KEY (`quiznum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `quiztype`
+--
+
+LOCK TABLES `quiztype` WRITE;
+/*!40000 ALTER TABLE `quiztype` DISABLE KEYS */;
+/*!40000 ALTER TABLE `quiztype` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `user_quiz`
+--
+
+DROP TABLE IF EXISTS `user_quiz`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user_quiz` (
+  `user_id` int(11) NOT NULL,
+  `quiznum` int(11) NOT NULL,
+  `score` int(11) DEFAULT NULL,
+  PRIMARY KEY (`user_id`,`quiznum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user_quiz`
+--
+
+LOCK TABLES `user_quiz` WRITE;
+/*!40000 ALTER TABLE `user_quiz` DISABLE KEYS */;
+/*!40000 ALTER TABLE `user_quiz` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `users`
 --
 
 DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `users` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
-  `fname` varchar(256) NOT NULL,
-  `lname` varchar(256) NOT NULL,
-  `uname` varchar(256) NOT NULL,
-  `emailadd` varchar(256) NOT NULL,
-  `gender` varchar(256) NOT NULL,
-  `birthday` varchar(256) NOT NULL,
-  `pass` varchar(256) NOT NULL,
-  `repass` varchar(256) NOT NULL,
+  `fname` varchar(256) CHARACTER SET latin1 NOT NULL,
+  `lname` varchar(256) CHARACTER SET latin1 NOT NULL,
+  `uname` varchar(256) CHARACTER SET latin1 NOT NULL,
+  `emailadd` varchar(256) CHARACTER SET latin1 NOT NULL,
+  `gender` varchar(256) CHARACTER SET latin1 NOT NULL,
+  `birthday` varchar(256) CHARACTER SET latin1 NOT NULL,
+  `pass` varchar(256) CHARACTER SET latin1 NOT NULL,
+  `repass` varchar(256) CHARACTER SET latin1 NOT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`user_id`, `fname`, `lname`, `uname`, `emailadd`, `gender`, `birthday`, `pass`, `repass`) VALUES
-(3, 'Jhaylord', 'Viray', 'jay', '2163058@slu.edu.ph', 'male', '2018-05-05', '$2y$10$TsjJm40sPFUaMvpDo.wwFu8QPkIo9jt7ImI2CQtiSkVE0ATjgGhHe', '$2y$10$QOKQQXh/sdbafh/Z7lFRAedEe6VPdXvXw6TN4igL7ojl0HLzCSFpu'),
-(4, 'aaa', 'aaa', 'aaa', '12121@gmail.com', 'female', '2018-05-03', '$2y$10$xDOw4hRqvS9eODMafylafue7ijc2P5GKZoE1E891ZlyA.TG3juOQS', '$2y$10$VRlBHtV4WeBAoCgkC5fVCOLZyj9unEelCRJpRm/ba8Lz3PLj2Cy/C'),
-(5, 'aaa', 'aaa', 'zxc', 'aaa@yahoo.com', 'male', '2018-05-02', '$2y$10$535vzHVcQhQinAAjZSIBherunPoZk3yEZwxtUrpsc7DALmfeZJ3t6', '$2y$10$CaW6z8VCXsqkYo6svbdnh.dWKSInl0GHzSEScTTFdNZfRbdCpqHTy'),
-(6, 'Test', 'Test', 'test', 'Test@gmail.com', 'male', '2018-05-01', '$2y$10$vmELS46qDhXfhrYIsg5Q8eRktCbgSb2k/QTPgrssBKCgiP89AANdO', '$2y$10$HYxfj7WaHux2K1xA4lhIku/jpD87tJRAD8MDWvtEVbIO/QC0SXzhi');
-COMMIT;
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (3,'Jhaylord','Viray','jay','2163058@slu.edu.ph','male','2018-05-05','$2y$10$TsjJm40sPFUaMvpDo.wwFu8QPkIo9jt7ImI2CQtiSkVE0ATjgGhHe','$2y$10$QOKQQXh/sdbafh/Z7lFRAedEe6VPdXvXw6TN4igL7ojl0HLzCSFpu'),(4,'aaa','aaa','aaa','12121@gmail.com','female','2018-05-03','$2y$10$xDOw4hRqvS9eODMafylafue7ijc2P5GKZoE1E891ZlyA.TG3juOQS','$2y$10$VRlBHtV4WeBAoCgkC5fVCOLZyj9unEelCRJpRm/ba8Lz3PLj2Cy/C'),(5,'aaa','aaa','zxc','aaa@yahoo.com','male','2018-05-02','$2y$10$535vzHVcQhQinAAjZSIBherunPoZk3yEZwxtUrpsc7DALmfeZJ3t6','$2y$10$CaW6z8VCXsqkYo6svbdnh.dWKSInl0GHzSEScTTFdNZfRbdCpqHTy'),(6,'Test','Test','test','Test@gmail.com','male','2018-05-01','$2y$10$vmELS46qDhXfhrYIsg5Q8eRktCbgSb2k/QTPgrssBKCgiP89AANdO','$2y$10$HYxfj7WaHux2K1xA4lhIku/jpD87tJRAD8MDWvtEVbIO/QC0SXzhi'),(7,'Blessly','Carbonell','blehli','blesslycarbonell@yahoo.com','female','06/09/1998','bleh','bleh');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2018-05-13  1:46:29

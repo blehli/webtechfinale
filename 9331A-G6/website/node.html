@@ -116,14 +116,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Logo</a>
+            <a class="navbar-brand" href="Homepage.html">WSTUTOR</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
+                <li class="active"><a href="#">Node.Js</a></li>
+                <li><a href="">Java</a></li>
+                <li><a href="#">Php</a></li>
+                <li><a href="#">ASP.Net</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
@@ -164,26 +164,51 @@
                         It is also perfect for I/O bound applications, Data Streaming applications, Data Real Intensive Applications, JSON based applications, and
                         single page applications. Its lightweight and efficient unique non-blocking I/O makes it perfect for real-time applications. Its libraries are the same concept with the Javascript.
                         Thus making it much easier to develop web applications.  Node.js is used by notable companies such as Microsoft, PayPal, Yahoo! And many more.  </p></blockquote>
-            <h3>Test</h3>
-            <p>Lorem ipsum...</p>            <h3>Test</h3>
-            <p>Lorem ipsum...</p>            <h3>Test</h3>
-            <p>Lorem ipsum...</p>
-            <h3>Test</h3>
-            <p>Lorem ipsum...</p>
-            <p>Lorem ipsum...</p>
-            <h3>Test</h3>
-            <p>Lorem ipsum...</p>
-            <h3>Test</h3>
-            <p>Lorem ipsum...</p>            <h3>Test</h3>
-            <p>Lorem ipsum...</p>            <h3>Test</h3>
-            <p>Lorem ipsum...</p>            <h3>Test</h3>
-            <p>Lorem ipsum...</p>
-            <h3>Test</h3>
-            <p>Lorem ipsum...</p>            <h3>Test</h3>
-            <p>Lorem ipsum...</p>            <h3>Test</h3>
-            <p>Lorem ipsum...</p>
-            <h3>Test</h3>
-            <p>Lorem ipsum...</p>
+                <blockquote><h3 style="color: white">WHAT IS A MODULE IN NODE.JS?</h3>
+                    <p style="color: #90ee90">Like libraries in JavaScript, modules in Node.js are collection of single to multiple javascript files that performs a function which
+                        can be repeatedly used throughout the whole process of an application. The Node.js implements <b>Common JS Modules Standard</b> which defines the Javascript standards for web
+                        server, desktop, and application. The Node.js has three types of modules; The Core, Local, and the Third Party module. Each modules performs different kind of tasks.</p>
+
+                    <center><h3 style="color: white">The Three Types of Modules in Node.Js</h3></center>
+                    <h3 style="color: white" >Core Modules</h3>
+                    <p style="color: #90ee90"> - They are located in the lib/ folder. They are loaded when their identifier are passed to a parameter. Basically, they are compiled into binary distributions
+                        and will load automatically once Node.Js starts</p>
+                    <h3 style="color: white" >Loading Modules</h3>
+                    <p style="color: #90ee90"> - In order for Core Modules to work. they are first invoked with a function called require(); Once they are loaded, the core modules can now
+                    operate.</p>
+                    <h3 style="color: white" >Third Party Modules</h3>
+                    <p style="color: #90ee90"> - These are the modules are not part of the built-in modules of Node.js. they are downloaded and can be used after installing the module.</p>
+                </blockquote>
+
+
+                <blockquote><h3 style="color: white">How to include Modules?</h3>
+                    <p style="color: #90ee90">In order for you to include modules that are included in the list of modules in node.js, you must first use the function require();</p>
+                    <p style="border-style: solid; border-color: lightgreen; color:white">Syntax: Require('Insert Module here');<br/>
+                        Example: Require('http'); - This will invoke the http module and now you can use it.
+                        </p>
+                </blockquote>
+                <blockquote><h3 style="color: white">How to create your own module?</h3>
+                    <p style="color: #90ee90">In order for you to create your own module you must first use the keyword called 'exports' followed by the name of your method</p>
+                    <p style="border-style: solid; border-color: lightgreen; color:white">Syntax: exports.< method > = function();<br/>
+                        Example: Create a module that returns current date and time<br/></p>
+                        <p style="border-style: solid; border-color: lightgreen; color:white">
+                         Code:<br/>
+                        exports.myDateTime = function date(){<br/>
+                        return Date();<br/>
+                        }</p>
+                    </p>
+                </blockquote>
+                <blockquote><h3 style="color: white">How to use Node.js as a java server</h3>
+                    <p style="color: #90ee90">We are going to learn how node.js is used as a web server by providing you a simple example of sending a request from a client to the server, then the server responding to the client.
+                        The Node.js has an HTTP module that can create HTTP servers that gives a response to the client.
+                        The method ‘createServer()’ is used in creating HTTP server. It will be executed when someone tries to access the computer’s default port (8080).
+                        After establishing the server, you can now add headers specifically the response header ‘200’ or the ‘Ok’.
+                        What happens in this part is that once the client sends a request and it is received, the server will respond with a header.
+                        Once you’re done with the headers you can now send a string to the response. You can do it by typing ‘response.end();’.
+                        It will appear if the request is accepted and is successful.
+                        After that you can make the server listen to the clients on a specific port by typing the command ‘server.listen(*enter port no. here)’.  Example below is provided.</p
+                    </p>
+                    <img src="../Homepage/pictures/ex.png"></blockquote>
             </div>
 
         </div>

@@ -9,14 +9,14 @@
     $total = $resulttotal->fetch_assoc();
     
 
-// get the question
+    // get the question
     $query = "SELECT * from question where quiznum=$quiznum and question_num=$questnum;";
         
-//get result
+    //get result
     $result = $conn->query($query);
     $question = mysqli_fetch_assoc($result);
 
-//get choices
+    //get choices
     $query2 ="SELECT * from choice where quiz_num=$quiznum and question_num=$questnum;";
 
     $choice = $conn->query($query2);
@@ -35,13 +35,13 @@
         
         
         <form action="checkjavaanswer.php" method="POST">
+            
             <?php while($row = mysqli_fetch_assoc($choice)): ?>
                 <li><input name="choice" type="radio" value="<?php echo $row['choiceid']; ?>"/> <?php echo $row['choice_value']; ?></li>
             <?php endwhile; ?>
             <br>
-            <input name="submit" type="submit" value="Next"/>
             <input type="hidden" name="number" value="<?php echo $questnum; ?>"/>
-            
+            <input name="submit" type="submit" value="Next"/>
             
         </form>
         

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>WSTUTOR | Java</title>
+  <title>WSTUTOR | Web Security</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
@@ -33,7 +33,7 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 	
-	  <a class="navbar-brand font-weight-bold" style="color:#FFC107" href="#">WS TUTOR</a>
+	  <a class="navbar-brand font-weight-bold" style="color:#FFC107" href="Homepage.html">WS TUTOR</a>
 	 
 		
 	<div class="collapse navbar-collapse" id="collapsibleNavbar">
@@ -67,38 +67,51 @@
 <!--CONTENT-->
 <!--top image-->
 <div class="container" >
-  <div class="jumbotron" style="">
-<img id="headimg" class="img-fluid" alt="topimage" src="../pictures/java.png">
+  <div class="jumbotron bg-success text-light text-center" >
+    <h1>WEB SECURITY</h1>
   </div>     
 </div>
 
       <div class="container">
         <div class="row">
           <div class="col-lg-10 mx-auto">
-            <h2>JAVA</h2>
-            <p class="lead">Java is a object-oriented, general purpose language that is intended for GUI development, mobile applications, and also web development.
-			Being used in the web development, Java is mostly used in the server side with the use of its Java  servlets, struts, and JavaServer pages (JSP)
-			. The technologies used in java enables the programmer to provide server-side operations in the web application. This language can be used with 
-			HTML, HTTP, Apache Servers, and MySQL Database System.</p></br>
-			<p class="lead">	Web Applications created in java contains different application resources such as servlets , java server pages or JSP, and other resources which 
-			can be used to include more functionality in the application. Java Servlet technology and JavaServer Pages are server-side technologies in java 
-			that follows the Write Once, Run Anywhere paradigm which means that once you have written or created a web application, it can be run on any 
-			platforms as long as the platform has Java Virtual Machine(JVM).</p>
+            <h2 class="text-center">TOP 10 Most Critical Web Application Security Risks</h2><h3 class="text-center">OWASP 2017</h3>
+              <br><br>
+            <p class="lead">There are different factors that can affect the functionality of a web application. Some of which includes different web application security risks that can bring too much harm on the client as well as the provider of the web app.</p><br>
+              
+              
+              
+              
+              A1 - Injection
+
+
+        Injection occurs when there is an untrusted data which is sent as a part of a command or a query. Attackers use this to let the interpreter execute a certain command without proper authorization and is not really part of the original functionality of the application. Injections can be found on SQL, LDAP, XPath, or NoSQL queries, OS commands, XML parsers  and others. It can result to data loss, financial loss, denial of access and others.        
+
+
+Prevention:
+
+Use a parameterized API
+Use a velted library of framework
+Run the application with minimum privileges
+ Validate the input by doing the blacklist validation testing or whitelisting method
+Blacklisting
+An application compiles a list of malicious inputs then verifies the external input from a given list of malicious inputs
+                    -     Whitelisting
+
+                   -    An external input is tested from a set of approved inputs. Rejects an external
+
+                        Input if it failed to match from a set of approved inputs.
+
+Apply the principle of least privilege wherein for example  read access accounts should only be granted with read access permissions from the table/s they only need to access.
+              
+              
+                      <!--QUIZ-->
+            <a href="#" type="button" class="btn btn-success btn-lg" role="button">TAKE QUIZ</a><br>
           </div>
         </div>
       </div>
 
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-10 mx-auto">
-            <h2>Java Servlets</h2>
-            <p class="lead">	Servlets are Java classes that use request-response programming model in order to include capabilities of a server which hosts applications.
-			It can respond to any type of request  but are commonly used to access applications hosted by the server. 
-			It can generate html pages using print
-			statements.</p>
-          </div>
-        </div>
-      </div>
+
 
 
 
@@ -117,5 +130,11 @@
 
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+                        
+    <script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();   
+    });
+    </script>
 </body>
 </html>			

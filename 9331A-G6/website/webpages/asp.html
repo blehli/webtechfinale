@@ -76,9 +76,70 @@
         <div class="row">
           <div class="col-lg-10 mx-auto">
             <h2>ASP.NET</h2>
-            <p class="lead">ASP.NET or ASP (Active Server Pages) are server side technologies developed by Microsoft. It is used to build dynamic web site, application and services. The framework mainly uses the language C#. ASP supports many different development models namely the Classic ASP, Web Forms, MVC, Web Pages, API and Core. </p></br>
+            <p class="lead">ASP.NET or ASP (Active Server Pages) are server side technologies developed by Microsoft. 
+			It is used to build dynamic web site, application and services. The framework mainly uses the language C#.
+			ASP supports many different development models namely the Classic ASP, Web Forms, MVC, Web Pages, API and Core. </p></br>
+			<p class="lead">ASP.NET Web Pages is an SPA application model (Single Page Application). 
+			The SPA model is quite similar to PHP and Classic ASP. ASP.NET Web Pages is being merged into the new ASP.NET Core. 
+			In addition, Web Pages applications are easily extendable with programmable helpers for databases, videos, graphics, social networking and more.
+			</p>
+			
+			<h4>Web Pages Razor Markup</h4>
+			<p class ="lead">Razor is a simple markup syntax for embedding server code (C# or VB) into ASP.NET web pages.</p>
+			<div class="jumbotron" style="background-color: #99A3A4  ">
+			<h5> Sample Code: </h5>
+				<p> < !DOCTYPE html> <br/>
+					< html><br/>
+					< head>
+					< title>@Page.Title</ title>
+					< / head><br/>
+                    < body><br/>
+					@RenderBody()<br/>
+					</ body><br/>
+					</ html>
+				</p>
+						</div>	
+			  <h2>Web Pages - Objects</h2>
+			  <p class ="lead">below are the list of page object methods </p>
+		     <dl>
+            <dt>IsPost</dt>
+            <dd>Returns true if the HTTP data transfer method used by the client is a POST request</dd>
+            <dt>Layout	</dt>
+            <dd>Gets or sets the path of a layout page</dd>
+            <dt>Page</dt>
+            <dd>Provides property-like access to data shared between pages and layout pages</dd>
+		    <dt>Request</dt>
+            <dd>Gets the HttpRequest object for the current HTTP request</dd>
+			<dt>Server</dt>
+            <dd>Gets the HttpServer Utility object that provides web-page processing methodst</dd>
+          </dl>
+
+			
+						<div class="jumbotron" style="background-color: #99A3A4  ">
+			<h5> Sample Code: </h5>
+				<p> < !DOCTYPE html> <br/>
+					< html><br/>
+					< head>
+					< title>@Page.Title</ title>
+					< / head><br/>
+                    < body><br/>
+					@RenderBody()<br/>
+					</ body><br/>
+					</ html>
+				</p>
+						</div>	
+
+
+
+
+
+
+			   <!--QUIZ-->
+				  
+			 <h2>Other types of ASP.net</h2>  
 			<p class="lead"></p>
-                  <!--QUIZ-->
+				  
+				  
             <a href="#" type="button" class="btn btn-success btn-lg" role="button">TAKE QUIZ</a><br>
           </div>
         </div>

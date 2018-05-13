@@ -25,11 +25,12 @@ DROP TABLE IF EXISTS `choice`;
 CREATE TABLE `choice` (
   `quiz_num` int(11) NOT NULL,
   `question_num` int(11) NOT NULL,
-  `correct` tinyint(1) NOT NULL DEFAULT '0',
-  `choice1` varchar(45) NOT NULL,
-  `choice2` varchar(45) NOT NULL,
-  `choice3` varchar(45) NOT NULL,
-  PRIMARY KEY (`quiz_num`,`question_num`)
+  `iscorrect` tinyint(1) NOT NULL DEFAULT '0',
+  `choice_value` text NOT NULL,
+  `choiceid` int(11) NOT NULL,
+  PRIMARY KEY (`choiceid`),
+  KEY `quiznum_idx` (`quiz_num`),
+  KEY `question_num_idx` (`question_num`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -39,6 +40,7 @@ CREATE TABLE `choice` (
 
 LOCK TABLES `choice` WRITE;
 /*!40000 ALTER TABLE `choice` DISABLE KEYS */;
+INSERT INTO `choice` VALUES (1,1,0,'Java Servlet Pages',1),(1,1,1,'Java Server Pages',2),(1,1,0,'Java Server Programming',3),(1,1,0,'Java Servlet Programming',4),(2,2,1,'Hypertext Preprocessor',5),(2,2,0,'Pre-hypertext processor',6),(2,2,0,'Hypertext Programming',7),(2,2,0,'Progamming in Hypertext Processor',8);
 /*!40000 ALTER TABLE `choice` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -51,10 +53,9 @@ DROP TABLE IF EXISTS `question`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `question` (
   `question_num` int(11) NOT NULL,
-  `question` longtext NOT NULL,
   `quiznum` int(11) NOT NULL,
-  `answer` varchar(45) NOT NULL,
-  PRIMARY KEY (`question_num`),
+  `question` longtext NOT NULL,
+  PRIMARY KEY (`question_num`,`quiznum`),
   KEY `quiznum_idx` (`quiznum`),
   CONSTRAINT `quiznum` FOREIGN KEY (`quiznum`) REFERENCES `quiztype` (`quiznum`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -66,6 +67,7 @@ CREATE TABLE `question` (
 
 LOCK TABLES `question` WRITE;
 /*!40000 ALTER TABLE `question` DISABLE KEYS */;
+INSERT INTO `question` VALUES (1,1,'What does JSP stands for ?'),(1,2,'What does PHP stands for?');
 /*!40000 ALTER TABLE `question` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -80,7 +82,7 @@ CREATE TABLE `quiztype` (
   `quiznum` int(11) NOT NULL AUTO_INCREMENT,
   `type` varchar(45) NOT NULL,
   PRIMARY KEY (`quiznum`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -89,6 +91,7 @@ CREATE TABLE `quiztype` (
 
 LOCK TABLES `quiztype` WRITE;
 /*!40000 ALTER TABLE `quiztype` DISABLE KEYS */;
+INSERT INTO `quiztype` VALUES (1,'Java'),(2,'PHP'),(3,'Node.js'),(4,'ASP.net'),(5,'Ruby');
 /*!40000 ALTER TABLE `quiztype` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -155,4 +158,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-05-13  8:58:38
+-- Dump completed on 2018-05-13 16:24:08

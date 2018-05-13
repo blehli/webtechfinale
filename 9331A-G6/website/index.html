@@ -1,41 +1,43 @@
 <?php
-
 session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
-    <link rel="icon" href="../pictures/LOGO.png">
-    <meta charset="UTF-8">
-    <title>LOGIN | Web Systems and Technology</title>
-    <link rel="stylesheet" href="css/login_reg.css">
-</head>
+    <head>
+      <title>LOGIN ACCOUNT</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    </head>
 
-<body>
-
-<div class="firsthalf">
-    <h1>WELCOME TO WSTUTOR</h1>
-    <h3>A WEBSITE FOR WEB SCRIPTING BASIC TUTORIAL.</h3>
-</div>
-<div class="login">
-    <h1>WSTUTOR</h1>
-    <h3>&reg;</h3>
-    <form action="php/logincheck.php" method="GET">
-
-        <input type="text" name="uname" placeholder="ENTER YOUR USERNAME">
-        <input type="password" name="pass" placeholder="ENTER YOUR PASSWORD">
-        <br>
-        <button type="submit" name="login">Login</button>
-        <h4><a href="webpages/forgotpassword.php" style="text-decoration: none; color: white">Forgot Password?</a></h4>
-    </form>
-
-    <h5>New? Not registered yet? <a href="webpages/register.html" style="text-decoration: none; color: #8A2BE2">Sign-up here</a></h5>
-</div>
-
-
-
-</body>
-
+    <body class="bg-dark">
+        <div class="container">
+            <div class="card card-login mx-auto mt-5">
+                <div class="card-header" style="background-color:#E0F2F1"><h5>WS Tutor</br><small>Login</small></h5></div>
+                    <div class="card-body">
+                        <form action="php/logincheck.php" method="post" target="_self">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">User name</label>
+                                <input name="username" class="form-control" id="exampleInputUserName" type="text" aria-describedby="nameHelp" placeholder="Enter username">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input name="password" class="form-control" id="exampleInputPassword1" type="password" placeholder="Password">
+                            </div>
+                            <a class="btn btn-secondary btn-block" href="index.html">Login</a>
+                        </form>
+                    </div>
+                    <div class="text-center">
+                    <a class="d-block small mt-3" href="webpages/register.html">Register an Account</a>
+                    </div>
+                </div>
+        <!-- Bootstrap core JavaScript-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- Core plugin JavaScript-->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    </body>
 </html>

@@ -1,3 +1,12 @@
+<?php
+    $login = $_GET['access'];
+    if ($login != "success"){
+        header("LOCATION: ../index.html?error-log-in-first");
+    }
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,30 +42,30 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 	
-	  <a class="navbar-brand font-weight-bold" style="color:#FFC107" href="Homepage.html">WS TUTOR</a>
+	  <a class="navbar-brand font-weight-bold" style="color:#FFC107" href="../php/Homepage.php?access=success">WS TUTOR</a>
 	 
 		
 	<div class="collapse navbar-collapse" id="collapsibleNavbar">
 	  <ul class="navbar-nav">
 		<li class="nav-item">
-		  <a class="nav-link" href="node.html">node.js</a>
+		  <a class="nav-link" href="node.php?access=success">node.js</a>
 		</li>
 		<li class="nav-item">
-		  <a class="nav-link" href="java.html">java</a>
+		  <a class="nav-link" href="java.php?access=success">java</a>
 		</li>
 		<li class="nav-item">
-		  <a class="nav-link" href="php.html">php</a>
+		  <a class="nav-link" href="php.php?access=success">php</a>
 		</li>
 		<li class="nav-item">
-		  <a class="nav-link" href="asp.html">asp.net</a>
+		  <a class="nav-link" href="asp.php?access=success">asp.net</a>
 		</li>
 		<li class="nav-item">
-		  <a class="nav-link" href="security.html">web security</a>
+		  <a class="nav-link" href="security.php?access=success">web security</a>
 		</li>
 	  </ul>
           <ul class="navbar-nav ml-auto justify-content-end">
             <li class="nav-item active">
-              <a class="nav-link" href="#">logout
+              <a class="nav-link" href="../php/logout.php">logout
                 <span class="sr-only">(current)</span>
               </a>
             </li>

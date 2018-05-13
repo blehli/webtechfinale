@@ -11,7 +11,7 @@ if (isset($_POST['submit'])){
         header("Location: ../index.html?login=empty");
         exit();
     }else {
-        $sql ="SELECT * FROM users WHERE uname = '$username'";
+        $sql ="SELECT * FROM users WHERE uname = '$username';";
         $result = mysqli_query($conn,$sql);
         $resultCheck = mysqli_num_rows($result);
         if($resultCheck < 1){
@@ -31,7 +31,7 @@ if (isset($_POST['submit'])){
                     $_SESSION['u_last'] = $row['lname'];
                     $_SESSION['u_name'] = $row['uname'];
                     $_SESSION['u_email'] = $row['email'];
-                     header("Location: ../index.html?login=success");
+                     header("Location: ../webpages/Homepage.html?login=success");
                     exit();
                 }
 

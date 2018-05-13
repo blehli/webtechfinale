@@ -129,12 +129,11 @@ CREATE TABLE `users` (
   `lname` varchar(256) CHARACTER SET latin1 NOT NULL,
   `uname` varchar(256) CHARACTER SET latin1 NOT NULL,
   `emailadd` varchar(256) CHARACTER SET latin1 NOT NULL,
-  `gender` varchar(256) CHARACTER SET latin1 NOT NULL,
   `birthday` varchar(256) CHARACTER SET latin1 NOT NULL,
   `pass` varchar(256) CHARACTER SET latin1 NOT NULL,
   `repass` varchar(256) CHARACTER SET latin1 NOT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -143,7 +142,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (3,'Jhaylord','Viray','jay','2163058@slu.edu.ph','male','2018-05-05','$2y$10$TsjJm40sPFUaMvpDo.wwFu8QPkIo9jt7ImI2CQtiSkVE0ATjgGhHe','$2y$10$QOKQQXh/sdbafh/Z7lFRAedEe6VPdXvXw6TN4igL7ojl0HLzCSFpu'),(4,'aaa','aaa','aaa','12121@gmail.com','female','2018-05-03','$2y$10$xDOw4hRqvS9eODMafylafue7ijc2P5GKZoE1E891ZlyA.TG3juOQS','$2y$10$VRlBHtV4WeBAoCgkC5fVCOLZyj9unEelCRJpRm/ba8Lz3PLj2Cy/C'),(5,'aaa','aaa','zxc','aaa@yahoo.com','male','2018-05-02','$2y$10$535vzHVcQhQinAAjZSIBherunPoZk3yEZwxtUrpsc7DALmfeZJ3t6','$2y$10$CaW6z8VCXsqkYo6svbdnh.dWKSInl0GHzSEScTTFdNZfRbdCpqHTy'),(6,'Test','Test','test','Test@gmail.com','male','2018-05-01','$2y$10$vmELS46qDhXfhrYIsg5Q8eRktCbgSb2k/QTPgrssBKCgiP89AANdO','$2y$10$HYxfj7WaHux2K1xA4lhIku/jpD87tJRAD8MDWvtEVbIO/QC0SXzhi'),(7,'Blessly','Carbonell','blehli','blesslycarbonell@yahoo.com','female','06/09/1998','bleh','bleh');
+INSERT INTO `users` VALUES (3,'Jhaylord','Viray','jay','2163058@slu.edu.ph','2018-05-05','$2y$10$TsjJm40sPFUaMvpDo.wwFu8QPkIo9jt7ImI2CQtiSkVE0ATjgGhHe','$2y$10$QOKQQXh/sdbafh/Z7lFRAedEe6VPdXvXw6TN4igL7ojl0HLzCSFpu'),(4,'aaa','aaa','aaa','12121@gmail.com','2018-05-03','$2y$10$xDOw4hRqvS9eODMafylafue7ijc2P5GKZoE1E891ZlyA.TG3juOQS','$2y$10$VRlBHtV4WeBAoCgkC5fVCOLZyj9unEelCRJpRm/ba8Lz3PLj2Cy/C'),(5,'aaa','aaa','zxc','aaa@yahoo.com','2018-05-02','$2y$10$535vzHVcQhQinAAjZSIBherunPoZk3yEZwxtUrpsc7DALmfeZJ3t6','$2y$10$CaW6z8VCXsqkYo6svbdnh.dWKSInl0GHzSEScTTFdNZfRbdCpqHTy'),(6,'Test','Test','test','Test@gmail.com','2018-05-01','$2y$10$vmELS46qDhXfhrYIsg5Q8eRktCbgSb2k/QTPgrssBKCgiP89AANdO','$2y$10$HYxfj7WaHux2K1xA4lhIku/jpD87tJRAD8MDWvtEVbIO/QC0SXzhi'),(8,'Delfin','Cachin','delfin','delfin@gmail.com','1998-03-01','$2y$10$55qDNgdfAyXjxl97kfkrE.yONWNYBtuR8PAcehLY5myA837rwycb2','$2y$10$yo2jA2t75QoL5W3XDlHz.OR1glOdKnXmPxTNjvxcAh0LNGoe3Il4S'),(9,'Blessly','Carbonell','blehli','blesslycarbonell@gmail.com','1998-09-06','$2y$10$RwL/FzEP6.vY7x3CW87Vxu2qLjxXwLM6CwOJ/0bViGYtxkbXQvjlG','$2y$10$HqenK06e1h8eqcTmamEqt.FQVxlUp0exnWFsg5IsZQve3lqEucMii');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -156,4 +155,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-05-13  1:46:29
+-- Dump completed on 2018-05-13  8:58:38

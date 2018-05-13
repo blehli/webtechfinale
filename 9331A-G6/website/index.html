@@ -18,20 +18,21 @@ session_start();
             <div class="card card-login mx-auto mt-5">
                 <div class="card-header" style="background-color:#E0F2F1"><h5>WS Tutor</br><small>Login</small></h5></div>
                     <div class="card-body">
-                        <form action="php/logincheck.php" method="post" target="_self">
+                        <form action="php/logincheck.php" method="POST" target="_self">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">User name</label>
-                                <input name="username" class="form-control" id="exampleInputUserName" type="text" aria-describedby="nameHelp" placeholder="Enter username">
+                                <input name="uname" class="form-control" id="exampleInputUserName" type="text" aria-describedby="nameHelp" placeholder="Enter username">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Password</label>
-                                <input name="password" class="form-control" id="exampleInputPassword1" type="password" placeholder="Password">
+                                <input name="pass" class="form-control" id="exampleInputPassword1" type="password" placeholder="Password">
                             </div>
-                            <a class="btn btn-secondary btn-block" href="index.html">Login</a>
+                            <input name="submit" type="submit" class="btn btn-secondary btn-block" value="Login">
                         </form>
                     </div>
                     <div class="text-center">
-                    <a class="d-block small mt-3" href="webpages/register.html">Register an Account</a>
+                        <a class="d-block small mt-3" href="webpages/register.html">Register an Account</a>
+                        <br>
                     </div>
                 </div>
         <!-- Bootstrap core JavaScript-->

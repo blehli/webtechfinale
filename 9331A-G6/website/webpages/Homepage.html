@@ -1,56 +1,155 @@
-<?php
-
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
-    <link rel="icon" href="../pictures/LOGO.png">
-    <link rel="stylesheet" href="css/homepage.css">
-    <meta charset="UTF-8">
-    <title>MENU | Web Systems and Technology</title>
+  <title>WSTUTOR | Node.js</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    
+  <style>
+      #headimg{
+          display: block;
+          width: 25%;
+          margin-left: auto;
+          margin-right: auto;
+      }
+      #otherimg{
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+      }
+	  
+	  
+	  .jumbotron{
+	  padding: 300px;
+	  }
+	  
+	  .containerA h1{
+		position:relative;
+		top: -300px;
+		left: 400px;
+	  
+	  }
+	  
+	   .containerA h3{
+		position:relative;
+		top: -300px;
+		left: 350px;
+	  
+	  }
+	  
+	  .containerB{
+	        height: 450px;
+			width: 350px;
+			background-color:silver;
+			opacity: 0.8;
+			padding: 20px;
+			border-radius: 10px;
+			position:relative;
+			top: -300px;
+			left: -120px;
+	  }
+	  
+	  
+	  	  .containerC{
+	        height: 450px;
+			width: 350px;
+			background-color:silver;
+			opacity: 0.8;
+			padding: 20px;
+			border-radius: 10px;
+			position:relative;
+			top: -750px;
+			left: 300px;
+	  }
+	  
+	  	  .containerD{
+	        height: 450px;
+			width: 350px;
+			background-color:silver;
+			opacity: 0.8;
+			padding: 20px;
+			border-radius: 10px;
+			position:relative;
+			top: -1200px;
+			left: 700px;
+	  }
+	  
+	  
+	  
+	  	  .containerE{
+	        height: 450px;
+			width: 350px;
+			background-color:silver;
+			opacity: 0.8;
+			padding: 20px;
+			border-radius: 10px;
+			position:relative;
+			top: -1650px;
+			left: 1100px;
+	  }
+	  
+	  .containerF{
+		position: relative;
+		top -400px;
+	  
+	  }
+	  
+	  
+  </style>
 </head>
-
-<body>
-
-<div class="firsthalf">
-    <h1>CHOOSE A TOPIC TO LEARN:</h1>
-    <h3>A VARIETY OF GOOD LANGUAGES</h3>
+<body style="background-color: #E5E8E8  ">
+<div class="jumbotron jumbotron-fluid">
+  <div class="containerA">
+    <h1>Welcome to WSTUTOR</h1>
+	<h3>CHOOSE A PROGRAMMING LANGUAGES</h3>
+  </div>
+    <div class="containerB">
+		<a href="../webpages/java.html"><image src="../pictures/java.png" height="350px"></a>
+	</div>
+    <div class="containerC">
+	   <a href="../webpages/php.html"> <image src="../pictures/php.png" height="350px" width="300px"></image></a>
+	</div>	
+	    <div class="containerD">
+	    <a href="../webpages/asp.html"><image src="../pictures/asp.png" height="350px" width="300px"></image></a>
+	</div>
+	    <div class="containerE">
+	    <a href="../webpages/node.html"><image src="../pictures/node.png" height="350px" width="300px"></image></a>
+	</div>
 </div>
 
-<div class="java">
-    <h1> JAVA </h1>
-    <div class ="javapicloc">
-    <image src="../website/pictures/java.png" height="350px"></image>
-    </div>
+<div class="jumbotron jumbotron-fluid">
+  <div class="containerE">
+    <h1>Bootstrap Tutorial</h1>      
+    <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile-first projects on the web.</p>
+  </div>
 </div>
 
-<div class="php">
-    <h1> PHP </h1>
-    <div class ="phppicloc">
-        <image src="../website/pictures/php.png" height="190px"></image>
-    </div>
-</div>
-
-    <div class="asp">
-        <h1> ASP.NET </h1>
-        <div class ="asppicloc">
-            <image src="../website/pictures/asp.png" height="300px"></image>
-        </div>
-    </div>
-
-        <div class="node">
-            <h1> NODE.JS </h1>
-            <div class ="nodepicloc">
-                <image src="../website/pictures/node.png" height="200px"></image>
-            </div>
-        </div>
 
 
+    <footer class="py-4 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">&copy; WS Tutor 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+	
+	
+	    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+                        
+    <script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();   
+    });
+    </script>
 </body>
-
-
-</html>
+</html>			

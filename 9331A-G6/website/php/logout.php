@@ -46,14 +46,13 @@
         </div>
 	</nav>
 	
-    <center><br><br>// INSERT THANK YOU! YOU HAVE LOGGED OUT SUCCESSFULLY!
-    <br>// LOGIN BUTTON
-        <br> ALSO PUT THIS NAV BAR SA MAY LOGIN AT REGISTER AT UNG FOOTER DIN
-    </center>
+	<br><br>
+	<div class="container text-center">
+	            <p class="lead text-center">THANK YOU! YOU HAVE LOGGED OUT SUCCESSFULLY!</p><br>
+				<button type="button" class="btn btn-outline-secondary btn-lg" href="../index.html">LOGIN</button>
+    </div>
     
-    
-   
-<br><br>
+	<br><br>
 
 <!--FOOTER-->
     <footer class="py-4 bg-dark">

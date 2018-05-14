@@ -1,0 +1,232 @@
+commit
+@blehli
+blehli committed 2 hours ago
+ 
+ayusin niyo pa
+@blehli
+blehli committed 2 hours ago
+ 
+added quiz
+@jhaylord18
+jhaylord18 committed 4 hours ago
+ 
+quiz at modals nalang !
+@blehli
+blehli committed 9 hours ago
+ 
+parang may di nasali
+@dc-04
+dc-04 committed 14 hours ago
+ 
+added modal and other pages
+@dc-04
+dc-04 committed 14 hours ago
+ 
+hompage final
+@dc-04
+dc-04 committed 15 hours ago
+ 
+Commits on May 13, 2018
+
+added pictures
+@jhaylord18
+jhaylord18 committed 18 hours ago
+ 
+added content
+@jhaylord18
+jhaylord18 committed 18 hours ago
+ 
+added content
+@jhaylord18
+jhaylord18 committed 18 hours ago
+ 
+leaderboardconnected to dbase
+@blehli
+blehli committed 20 hours ago
+ 
+changed hompage
+@dc-04
+dc-04 committed 22 hours ago
+ 
+yes
+@dc-04
+dc-04 committed 23 hours ago
+ 
+updated homepage
+@jhaylord18
+jhaylord18 committed a day ago
+ 
+quiz daw
+@blehli
+blehli committed a day ago
+ 
+added other html
+@dc-04
+dc-04 committed a day ago
+ 
+added java and node html
+@dc-04
+dc-04 committed a day ago
+ 
+added java.html
+@dc-04
+dc-04 committed a day ago
+ 
+login and register is already working!
+@blehli
+blehli committed a day ago
+ 
+walang nadagdag
+@blehli
+blehli committed a day ago
+ 
+updated the schema
+@blehli
+blehli committed 2 days ago
+ 
+Commits on May 12, 2018
+
+commit
+@tyuyuiertuio
+tyuyuiertuio committed 2 days ago
+ 
+push daw olet
+@blehli
+blehli committed 2 days ago
+ 
+organized files
+@blehli
+blehli committed 2 days ago
+ 
+added contents
+@jhaylord18
+jhaylord18 committed 2 days ago
+ 
+added pictures
+@jhaylord18
+jhaylord18 committed 2 days ago
+ 
+added register and login page
+@dc-04
+dc-04 committed 2 days ago
+ 
+added node.js content
+@jhaylord18
+jhaylord18 committed 2 days ago
+ 
+added pictures
+@jhaylord18
+jhaylord18 committed 2 days ago
+ 
+Commits on May 11, 2018
+
+moved some files
+@blehli
+blehli committed 3 days ago
+ 
+Commits on May 8, 2018
+
+Add files via upload  …
+@2151789
+2151789 committed 6 days ago
+Verified   
+Commits on May 6, 2018
+modified index.html
+
+@dc-04
+dc-04 committed 8 days ago 
+modified the index.html
+
+@jhaylord18
+jhaylord18 committed 8 days ago 
+
+added homepage menu
+@jhaylord18
+jhaylord18 committed 8 days ago
+ 
+added background picture for homepage.html
+@jhaylord18
+jhaylord18 committed 8 days ago
+
+
+added background.jpg in the pictures folder
+@jhaylord18
+jhaylord18 committed 8 days ago
+ 
+added asp.png in the pictures folder
+@jhaylord18
+jhaylord18 committed 8 days ago
+ 
+added fonts folder
+@jhaylord18
+jhaylord18 committed 8 days ago
+ 
+added css file named homepage.css for the homepage.html
+@jhaylord18
+jhaylord18 committed 8 days ago
+ 
+changed the content of login_reg.css
+@jhaylord18
+jhaylord18 committed 8 days ago
+ 
+added in database and php folder
+@dc-04
+dc-04 committed 9 days ago
+ 
+Commits on May 3, 2018
+
+added initial quiz feature
+@dc-04
+dc-04 committed 12 days ago
+ 
+Added the notification method
+@tyuyuiertuio
+tyuyuiertuio committed 12 days ago
+Verified
+   
+Commits on May 1, 2018
+
+initial html for index page. modified some values
+@jhaylord18
+jhaylord18 committed 13 days ago
+ 
+iniial html for registration page. modified some values
+@jhaylord18
+jhaylord18 committed 13 days ago
+ 
+added initial script for registering users into the database
+@jhaylord18
+jhaylord18 committed 13 days ago
+ 
+added initial login script
+@jhaylord18
+jhaylord18 committed 13 days ago
+ 
+added dbconn.php for the connection of the database
+@jhaylord18
+jhaylord18 committed 13 days ago
+ 
+added loginsystem.sql for the database of registered users
+@jhaylord18
+jhaylord18 committed 13 days ago
+ 
+Commits on Apr 30, 2018
+
+index (login) and register html pages structure
+@blehli
+blehli committed 14 days ago
+ 
+Commits on Apr 27, 2018
+
+Uploaded the copy of progress report to become the basis of tasks.
+@blehli
+blehli committed 17 days ago
+ 
+Create README.md
+@tyuyuiertuio
+tyuyuiertuio committed 17 days ago
+Verified   
+Folder structure for the requirement
+
+@blehli
+blehli committed 18 days ago

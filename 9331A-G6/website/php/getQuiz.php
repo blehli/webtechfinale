@@ -1,5 +1,7 @@
 <?php
-    include 'dbconn.php';
+session_start(); 
+
+include 'dbconn.php';
     
     $query3 = "SELECT count(question_num) as total FROM question ;";
     $resulttotal = $conn->query($query3);

@@ -1,4 +1,5 @@
 <?php
+session_start();
     $login = $_GET['access'];
     if ($login != "success"){
         header("LOCATION: ../index.html?error-log-in-first");

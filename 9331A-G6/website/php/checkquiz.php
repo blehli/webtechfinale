@@ -1,6 +1,7 @@
 <?php include 'dbconn.php'; ?>
 
-<?php session_start(); ?>
+<?php session_start(); 
+?>
 
 <?php 
     
@@ -23,8 +24,8 @@
             $number++;
         endwhile;
           
-        //$query = "SELECT * from choice where quiz_num=1 and question_num= $quest and iscorrect=1;";
-       
+        $query = "INSERT INTO user_quiz (user_id, score) VALUES ($userid, $score);";
+        $result = mysqli_query($conn, $query);
        
     }
 ?>

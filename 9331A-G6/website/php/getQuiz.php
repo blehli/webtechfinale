@@ -1,30 +1,16 @@
 <?php
     include 'dbconn.php';
-
-    $questnum = (INT) $_GET['n'];
-    $quiznum = 1;
     
-    $query3 = "SELECT count(question_num) as total FROM question where quiznum=$quiznum;";
+    $query3 = "SELECT count(question_num) as total FROM question ;";
     $resulttotal = $conn->query($query3);
     $total = $resulttotal->fetch_assoc();
     
 
     // get the question
-    $query = "SELECT * from question where quiznum=$quiznum and question_num=$questnum;";
-        
+    $query = "SELECT question_num, question, answer from question;";     
     //get result
     $result = $conn->query($query);
-    $question = mysqli_fetch_assoc($result);
-
-    //get choices
-    $query2 ="SELECT * from choice where quiz_num=$quiznum and question_num=$questnum;";
-
-    $choice = $conn->query($query2);
     
-
-    $querytotal = "SELECT * from question where quiznum =$quiznum;";
-    $totalresult = $conn->query($querytotal);
-    $totalquiz = $totalresult->num_rows;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,9 +19,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-    
-  
-    
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
@@ -51,7 +35,7 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 	
-	  <a class="navbar-brand font-weight-bold " style="color:#FFC107" href="Homepage.php">WS TUTOR</a>
+	  <a class="navbar-brand font-weight-bold " style="color:#FFC107" href="Homepage.php?access=success">WS TUTOR</a>
 	 
 		
 	<div class="collapse navbar-collapse" id="collapsibleNavbar">
@@ -65,28 +49,34 @@
         </div>
 	</nav>
 	
-
-      
-
-    <div class="container">  <div class="jumbotron">
-        
-        <p clas="lead"><?php echo $question['question']; ?></p>
-            <br>
-            <form action="checkjavaanswer.php" method="POST">
-            
-            <?php while($row = mysqli_fetch_assoc($choice)): ?>
-                <li><input name="choice" type="radio" value="<?php echo $row['choiceid']; ?>"/> <?php echo $row['choice_value']; ?></li>
-            <?php endwhile; ?>
-            <br>
-            <input type="hidden" name="number" value="<?php echo $questnum; ?>"/>
-            <input class="btn btn-info" name="submit" type="submit" value="Next"/>
-            
-        </form>
     
-    </div></div>
- 
-
-    <!-- LOGOUT MODAL -->
+    <div class="container">
+        <div class="card card-register mx-auto mt-4">
+        <!--card header-->
+            <div class="card-header" style="background-color:#E0F2F1"><h5 class="font-weight-bold" style="color:#FFC107"><center>There are <?php echo $total['total']; ?> questions for this quiz.</center><br><small class="text-secondary"><center>Goodluck!</center></small></h5></div>
+            
+            <form action="checkquiz.php" method="POST">
+                <?php while($question = mysqli_fetch_assoc($result)): ?>
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col-md-6">
+                             <?php echo $question['question_num']; ?>.  <?php echo $question['question']; ?> 
+                        </div>
+                        <div class="col-md-6">
+                            <input name="answer<?php echo $question['question_num']; ?>" type="textbox"/> <br>
+                        </div>
+                    </div>
+                </div>
+                <?php endwhile; ?>
+                
+                <center><input type="submit" name="submit" value="Done"/>  </center>
+            </form>
+            
+        </div>
+    </div>
+    
+     
+<!-- LOGOUT MODAL -->
   <div class="modal fade" id="confirm">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
@@ -98,7 +88,7 @@
         </div>
         <!-- Modal footer -->
         <div class="modal-footer">
-          <button type="button" class="btn btn-danger" href="../index.html">OK</button>
+          <button type="button" class="btn btn-danger" ><a href="../index.html">OK</a></button>
           <button type="button" class="btn btn-warning text-light" data-dismiss="modal">Close</button>
         </div>
         

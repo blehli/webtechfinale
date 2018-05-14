@@ -144,12 +144,7 @@
 
 
 			   <!--QUIZ-->
-				  
-			 <h2>Other types of ASP.net</h2>  
-			<p class="lead"></p>
-				  
-				  
-            <a href="#" type="button" class="btn btn-success btn-lg" role="button">TAKE QUIZ</a><br>
+			
           </div>
         </div>
       </div>

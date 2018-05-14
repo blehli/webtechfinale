@@ -1,5 +1,0 @@
-<?php
-    include 'dbconn.php';
-    
-    
-?>

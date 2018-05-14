@@ -421,7 +421,7 @@ be able to make a request and get the contents of the system.
 		  
 		  
                       <!--QUIZ-->
-            <a href="#" type="button" class="btn btn-success btn-lg" role="button">TAKE QUIZ</a><br>
+         
           </div>
         </div>
       </div>

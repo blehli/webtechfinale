@@ -1,10 +1,11 @@
 <?php
 session_start();
+$_SESSION['username'] = $_POST['uname']; 
 if (isset($_POST['submit'])){
     include 'dbconn.php';
     $username = mysqli_real_escape_string($conn, $_POST['uname']);
     $password = mysqli_real_escape_string($conn, $_POST['pass']);
-
+    
     //error handlers
     //check if inputs are empty
     if(empty($username) || empty($password)){

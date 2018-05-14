@@ -55,6 +55,7 @@ CREATE TABLE `question` (
   `question_num` int(11) NOT NULL,
   `quiznum` int(11) NOT NULL,
   `question` longtext NOT NULL,
+  `answer` text NOT NULL,
   PRIMARY KEY (`question_num`,`quiznum`),
   KEY `quiznum_idx` (`quiznum`),
   CONSTRAINT `quiznum` FOREIGN KEY (`quiznum`) REFERENCES `quiztype` (`quiznum`) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -67,7 +68,7 @@ CREATE TABLE `question` (
 
 LOCK TABLES `question` WRITE;
 /*!40000 ALTER TABLE `question` DISABLE KEYS */;
-INSERT INTO `question` VALUES (1,1,'What does JSP stands for ?'),(1,2,'What does PHP stands for?');
+INSERT INTO `question` VALUES (1,1,'What does JSP stands for ?','Java Server Pages'),(2,2,'What does PHP stands for?','Hypertext Preprocessor');
 /*!40000 ALTER TABLE `question` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -116,6 +117,7 @@ CREATE TABLE `user_quiz` (
 
 LOCK TABLES `user_quiz` WRITE;
 /*!40000 ALTER TABLE `user_quiz` DISABLE KEYS */;
+INSERT INTO `user_quiz` VALUES (1,1,2),(1,2,3),(5,2,2),(6,1,2);
 /*!40000 ALTER TABLE `user_quiz` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -158,4 +160,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-05-13 16:24:08
+-- Dump completed on 2018-05-14 13:32:18

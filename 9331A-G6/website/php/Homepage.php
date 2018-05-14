@@ -1,4 +1,5 @@
 <?php
+   
     $login = $_GET['access'];
     if ($login != "success"){
         header("LOCATION: ../index.html?error-log-in-first");
@@ -21,7 +22,7 @@
 
     
   <style>
-      #headimg{
+      #heading{
           display: block;
           width: 25%;
           margin-left: auto;
@@ -66,7 +67,7 @@
 	<div class="collapse navbar-collapse" id="collapsibleNavbar">
           <ul class="navbar-nav ml-auto justify-content-end">
             <li class="nav-item active">
-              <a data-toggle="modal" data_target="#confirm" class="nav-link" >logout
+              <a data-toggle="modal" data_target="#confirm" class="nav-link" > <a href="../index.html">logout</a>
                 <span class="sr-only">(current)</span>
               </a>
             </li>
@@ -151,7 +152,7 @@
         
         <!--WHOLE QUIZ-->
         <h5>Feeling Confident?</h5>
-        <button type="button" class="btn btn-outline-secondary btn-lg" href="../index.html" data-toggle="tooltip" data-placement="right" title="The quiz consist of questions from all of the topics">TAKE QUIZ</button><br><br>
+        <button type="button" class="btn btn-outline-secondary btn-lg"  data-toggle="tooltip" data-placement="right" title="The quiz consist of questions from all of the topics"><a href="getQuiz.php">TAKE QUIZ</a></button><br><br>
         
         
         <!--ABOUT US LINK-->
@@ -224,34 +225,30 @@
           </div>
     
         </section>
-              
     
+     
 <!-- LOGOUT MODAL -->
-  <div id="confirm" class="modal fade" role="dialog">
+  <div class="modal fade" id="confirm">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
       
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">Confirm Logout</h4>
+          <h4 class="modal-title">Are you sure you want to logout ?</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        
-        <div class="modal-body">
-            <p>
-            Are you sure you want to logout ?
-            </p>
         </div>
         <!-- Modal footer -->
         <div class="modal-footer">
-          <button type="button" class="btn btn-danger" href="../index.html">OK</button>
+          <button type="button" class="btn btn-danger" ><a href="../index.html">OK</a></button>
           <button type="button" class="btn btn-warning text-light" data-dismiss="modal">Close</button>
         </div>
         
       </div>
     </div>
   </div>
-<!--end modal-->
+    <!--end modal-->
+    
+
     
 <!--FOOTER-->
     <footer class="py-4 bg-dark">

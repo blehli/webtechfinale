@@ -56,33 +56,29 @@ include 'dbconn.php';
         <div class="card card-register mx-auto mt-4">
         <!--card header-->
             <div class="card-header" style="background-color:#E0F2F1"><h5 class="font-weight-bold" style="color:#FFC107"><center>There are <?php echo $total['total']; ?> questions for this quiz.</center><br><small class="text-secondary"><center>Goodluck!</center></small></h5></div>
-            
-            <form action="checkquiz.php" method="POST">
+            <form action="checkquiz.php" method="POST" class="jumbotron">
                 <?php while($question = mysqli_fetch_assoc($result)): ?>
                 <div class="form-group">
                     <div class="form-row">
-                        <div class="col-md-6">
+                        <div class="col-5">
                              <?php echo $question['question_num']; ?>.  <?php echo $question['question']; ?> 
                         </div>
-                        <div class="col-md-6">
-                            <input name="answer<?php echo $question['question_num']; ?>" type="textbox"/> <br>
+                        <div class="col-5">
+                            <input class="form-control" name="answer<?php echo $question['question_num']; ?>" type="textbox" /> <br>
                         </div>
                     </div>
                 </div>
                 <?php endwhile; ?>
                 
-                <center><input type="submit" name="submit" value="Done"/>  </center>
+                <center><input class="btn btn-secondary" type="submit" name="submit" value="Done"/>  </center>
             </form>
-            
         </div>
     </div>
-    
      
 <!-- LOGOUT MODAL -->
   <div class="modal fade" id="confirm">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-      
         <!-- Modal Header -->
         <div class="modal-header">
           <h4 class="modal-title">Are you sure you want to logout ?</h4>
@@ -93,13 +89,11 @@ include 'dbconn.php';
           <button type="button" class="btn btn-danger" ><a href="../index.html">OK</a></button>
           <button type="button" class="btn btn-warning text-light" data-dismiss="modal">Close</button>
         </div>
-        
       </div>
     </div>
   </div>
     <!--end modal-->
-    
-
+   
 <!--FOOTER-->
     <footer class="py-4 bg-dark">
       <div class="container">

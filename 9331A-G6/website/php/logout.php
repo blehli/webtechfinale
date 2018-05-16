@@ -49,7 +49,7 @@
 	<br><br>
 	<div class="container text-center">
 	            <p class="lead text-center">THANK YOU! YOU HAVE LOGGED OUT SUCCESSFULLY!</p><br>
-				<button type="button" class="btn btn-outline-secondary btn-lg"><a class="navbar-nav ml-auto justify-content-end" href="../index.html">LOGIN</a></button>
+				<button type="button" class="btn btn-secondary"><a class="btn btn-secondary" href="../index.html" >LOGIN</a></button>
     </div>
     
 	<br><br>

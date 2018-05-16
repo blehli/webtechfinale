@@ -22,7 +22,7 @@ session_start();
 
     
   <style>
-      #heading{
+      #headimg{
           display: block;
           width: 25%;
           margin-left: auto;
@@ -67,7 +67,7 @@ session_start();
 	<div class="collapse navbar-collapse" id="collapsibleNavbar">
           <ul class="navbar-nav ml-auto justify-content-end">
             <li class="nav-item active">
-              <a data-toggle="modal" data_target="#confirm" class="nav-link" > <a href="../index.html">logout</a>
+              <a data-toggle="modal" data_target="#confirm" class="nav-link" > <a href="../index.html" class="btn btn-secondary" >logout</a>
                 <span class="sr-only">(current)</span>
               </a>
             </li>
